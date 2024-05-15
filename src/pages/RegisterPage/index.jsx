@@ -27,7 +27,7 @@ const RegisterPage = () => {
   };
 
   return (
-    <div className="container flex h-[100vh] items-center justify-center">
+    <div className="container flex h-[90vh] items-center justify-center">
       <Card className="mx-auto max-w-sm">
         <CardHeader>
           <CardTitle className="text-xl">Sign Up</CardTitle>
@@ -82,7 +82,7 @@ const RegisterPage = () => {
           </form>
           <div className="mt-4 text-center text-sm">
             Already have an account?{" "}
-            <Link to="/login" className="underline">
+            <Link to="/" className="underline">
               Sign in
             </Link>
           </div>

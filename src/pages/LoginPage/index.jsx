@@ -25,7 +25,7 @@ const LoginPage = () => {
   };
 
   return (
-    <div className="container flex h-[100vh] items-center justify-center">
+    <div className="container flex h-[90vh] items-center justify-center">
       <Card className="mx-auto max-w-sm">
         <CardHeader>
           <CardTitle className="text-2xl">Login</CardTitle>
