@@ -19,7 +19,7 @@ const login = async ({ email, password }) => {
   return response.data;
 };
 
-const getAllUser = async () => {
+const getAll = async () => {
   const response = await axiosInstance.get("/users");
   return response.data;
 };
@@ -32,6 +32,6 @@ const getOwnProfile = async () => {
 export const UsersServices = {
   register,
   login,
-  getAllUser,
+  getAll,
   getOwnProfile,
 };
