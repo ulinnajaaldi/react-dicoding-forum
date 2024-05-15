@@ -7,37 +7,47 @@ const threadsDetailsReducer = (threadsDetails = {}, action = {}) => {
     case ActionType.UP_VOTE_THREAD:
       return {
         ...threadsDetails,
-        upVotesBy: threadsDetails.upVotesBy.includes(action.payload.userId)
-          ? threadsDetails.upVotesBy.filter(
-              (id) => id !== action.payload.userId,
-            )
-          : threadsDetails.upVotesBy.concat([action.payload.userId]),
-        downVotesBy: threadsDetails.downVotesBy.filter(
-          (id) => id !== action.payload.userId,
-        ),
+        upVotesBy:
+          threadsDetails.upVotesBy &&
+          threadsDetails.upVotesBy.includes(action.payload.userId)
+            ? threadsDetails.upVotesBy.filter(
+                (id) => id !== action.payload.userId,
+              )
+            : (threadsDetails.upVotesBy || []).concat([action.payload.userId]),
+        downVotesBy:
+          threadsDetails.downVotesBy &&
+          threadsDetails.downVotesBy.filter(
+            (id) => id !== action.payload.userId,
+          ),
       };
 
     case ActionType.DOWN_VOTE_THREAD:
       return {
         ...threadsDetails,
-        downVotesBy: threadsDetails.downVotesBy.includes(action.payload.userId)
-          ? threadsDetails.downVotesBy.filter(
-              (id) => id !== action.payload.userId,
-            )
-          : threadsDetails.downVotesBy.concat([action.payload.userId]),
-        upVotesBy: threadsDetails.upVotesBy.filter(
-          (id) => id !== action.payload.userId,
-        ),
+        downVotesBy:
+          threadsDetails.downVotesBy &&
+          threadsDetails.downVotesBy.includes(action.payload.userId)
+            ? threadsDetails.downVotesBy.filter(
+                (id) => id !== action.payload.userId,
+              )
+            : (threadsDetails.downVotesBy || []).concat([
+                action.payload.userId,
+              ]),
+        upVotesBy:
+          threadsDetails.upVotesBy &&
+          threadsDetails.upVotesBy.filter((id) => id !== action.payload.userId),
       };
     case ActionType.NEUTRALIZE_THREAD:
       return {
         ...threadsDetails,
-        upVotesBy: threadsDetails.upVotesBy.filter(
-          (id) => id !== action.payload.userId,
-        ),
-        downVotesBy: threadsDetails.downVotesBy.filter(
-          (id) => id !== action.payload.userId,
-        ),
+        upVotesBy:
+          threadsDetails.upVotesBy &&
+          threadsDetails.upVotesBy.filter((id) => id !== action.payload.userId),
+        downVotesBy:
+          threadsDetails.downVotesBy &&
+          threadsDetails.downVotesBy.filter(
+            (id) => id !== action.payload.userId,
+          ),
       };
     case ActionType.CREATE_COMMENT:
       return {
