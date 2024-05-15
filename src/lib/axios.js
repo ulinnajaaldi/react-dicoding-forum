@@ -8,7 +8,17 @@ export const axiosInstance = axios.create({
 
 export const axiosInstanceWithAuth = axios.create({
   baseURL: API_URL,
-  headers: {
-    Authorization: `Bearer ${getAccessToken()}`,
-  },
 });
+
+axiosInstanceWithAuth.interceptors.request.use(
+  (config) => {
+    const token = getAccessToken();
+    if (token) {
+      config.headers.Authorization = `Bearer ${token}`;
+    }
+    return config;
+  },
+  (error) => {
+    return Promise.reject(error);
+  },
+);
