@@ -23,29 +23,29 @@ const ThreadDetailSection = (props) => {
 
   return (
     <section className="container max-w-2xl space-y-4 pb-5 pt-10">
-      <h1 className="text-2xl font-bold">{threadsDetails?.title}</h1>
+      <h1 className="text-xl font-bold md:text-2xl">{threadsDetails?.title}</h1>
 
       <article
-        className="prose max-w-none flex-col"
+        className="prose-sm max-w-none flex-col md:prose"
         dangerouslySetInnerHTML={{ __html: threadsDetails?.body }}
       />
-      <div className="flex items-center justify-between">
-        <div className="flex items-center gap-1">
-          <p className="text-sm md:text-base">
+      <div className="flex flex-col items-start justify-between gap-2 md:flex-row md:items-center md:gap-0">
+        <div className="flex items-center gap-4 md:gap-1">
+          <p className="text-xs sm:text-sm md:text-base">
             Dibuat {formatTimestamp(threadsDetails?.createdAt)} oleh
           </p>
           <div className="flex items-center justify-center gap-1">
             <img
               src={threadsDetails?.owner?.avatar}
               alt={threadsDetails?.owner?.name}
-              className="h-8 w-8 rounded-full object-cover"
+              className="h-6 w-6 rounded-full object-cover md:h-8 md:w-8"
             />
-            <p className="text-sm font-medium md:text-base">
+            <p className="text-xs font-medium sm:text-sm md:text-base">
               {threadsDetails?.owner?.name}
             </p>
           </div>
         </div>
-        <div className="flex items-center gap-1">
+        <div className="flex items-center gap-1 self-end md:self-auto">
           <Button
             variant="outline"
             size="sm"

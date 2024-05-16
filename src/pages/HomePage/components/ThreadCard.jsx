@@ -19,17 +19,23 @@ const ThreadCard = (props) => {
       <p className="inline-block max-w-max rounded-md border px-2 py-1 text-sm">
         #{thread.category}
       </p>
-      <Button variant="link" className="block pl-0 font-semibold" asChild>
-        <Link to={`/threads/${thread.id}`}>{thread.title}</Link>
-      </Button>
+      <div className="my-1 md:my-0">
+        <Button variant="link" className="text-wrap pl-0 font-semibold" asChild>
+          <Link to={`/threads/${thread.id}`} className="line-clamp-2">
+            {thread.title}
+          </Link>
+        </Button>
+      </div>
       <article
         className="prose-sm line-clamp-2 max-w-none flex-col"
         dangerouslySetInnerHTML={{ __html: thread.body }}
       />
-      <div className="flex items-center justify-between">
+      <div className="mt-2 flex flex-col items-start justify-between gap-2 md:mt-0 md:flex-row md:items-center md:gap-0">
         <div className="flex items-center gap-1">
-          <p className="text-sm">Dibuat {formatTimestamp(thread.createdAt)}</p>
-          <p className="text-sm">
+          <p className="text-xs md:text-sm">
+            Dibuat {formatTimestamp(thread.createdAt)}
+          </p>
+          <p className="text-xs md:text-sm">
             oleh <span className="font-medium">{thread.owner.name}</span>
           </p>
         </div>

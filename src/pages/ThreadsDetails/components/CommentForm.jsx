@@ -8,7 +8,7 @@ const CommentForm = (props) => {
 
   return (
     <form className="space-y-2">
-      <h2 className="text-lg font-semibold">Beri Komentar</h2>
+      <h2 className="text-base font-semibold md:text-lg">Beri Komentar</h2>
       <div className="flex flex-col gap-1">
         <Textarea
           placeholder="Tulis komentar anda"

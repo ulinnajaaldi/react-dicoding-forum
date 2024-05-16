@@ -20,11 +20,13 @@ const CommentCard = (props) => {
           <img
             src={comment?.owner?.avatar}
             alt={comment?.owner?.name}
-            className="h-8 w-8 rounded-full object-cover"
+            className="h-6 w-6 rounded-full object-cover md:h-8 md:w-8"
           />
-          <p className="text-sm font-medium">{comment?.owner?.name}</p>
+          <p className="text-xs font-medium md:text-sm">
+            {comment?.owner?.name}
+          </p>
         </div>
-        <p className="text-sm">
+        <p className="text-xs md:text-sm">
           {comment?.createdAt ? formatTimestamp(comment?.createdAt) : null}
         </p>
       </div>

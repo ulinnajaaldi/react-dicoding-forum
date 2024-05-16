@@ -59,6 +59,9 @@ const Navbar = ({ authUser, onSignOut }) => {
                   <Link to="/">Homepage</Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
+                  <Link to="/leaderboard">Ledaerboard</Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
                   <Link to="/create-thread">Create Treads</Link>
                 </DropdownMenuItem>
                 <DropdownMenuSeparator />
