@@ -1,4 +1,5 @@
 import { hideLoading, showLoading } from "react-redux-loading-bar";
+import { toast } from "sonner";
 
 import { ThreadsServices } from "@/service/ThreadsServices";
 import { VotesServices } from "@/service/VotesServices";
@@ -62,11 +63,14 @@ export const asyncFetchThreads = () => async (dispatch) => {
 };
 
 export const asyncCreateThread =
-  ({ title, body, content }) =>
+  ({ title, body, category }) =>
   async (dispatch) => {
     try {
-      const thread = await ThreadsServices.create({ title, body, content });
+      const thread = await ThreadsServices.create({ title, body, category });
       dispatch(createThreadActionCreator(thread));
+      toast.success(thread.message, {
+        description: "Thread berhasil dibuat",
+      });
     } catch (error) {
       console.error(error);
     }
