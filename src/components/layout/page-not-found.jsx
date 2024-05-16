@@ -2,6 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 
 import PageWrapper from "./page-wrapper";
+import { Button } from "../ui/button";
 
 const PageNotFound = ({ title, url }) => {
   const navigate = useNavigate();

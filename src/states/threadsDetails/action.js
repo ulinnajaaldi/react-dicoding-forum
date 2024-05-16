@@ -1,9 +1,9 @@
+import { hideLoading, showLoading } from "react-redux-loading-bar";
+import { toast } from "sonner";
+
 import { CommentServices } from "@/service/CommentServices";
 import { ThreadsServices } from "@/service/ThreadsServices";
 import { VotesServices } from "@/service/VotesServices";
-import { hideLoading } from "react-redux-loading-bar";
-import { showLoading } from "react-redux-loading-bar";
-import { toast } from "sonner";
 
 export const ActionType = {
   FETCH_THREAD: "FETCH_THREAD",

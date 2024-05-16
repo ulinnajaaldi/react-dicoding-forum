@@ -25,7 +25,7 @@ const ThreadsDetails = () => {
   }
 
   if (!threadsDetails?.id) {
-    return <PageNotFound title={"Thread"} url={"/threads"} />;
+    return <PageNotFound title="Thread" url="/threads" />;
   }
 
   return (

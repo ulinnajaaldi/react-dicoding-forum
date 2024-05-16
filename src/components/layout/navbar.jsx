@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import {
@@ -10,10 +10,9 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { useLocation } from "react-router-dom";
 
 const Navbar = ({ authUser, onSignOut }) => {
-  const pathname = useLocation().pathname;
+  const { pathname } = useLocation();
   const authPage = ["/login", "/register"];
 
   const renderButton = () => {
@@ -23,13 +22,12 @@ const Navbar = ({ authUser, onSignOut }) => {
           <Link to="/">Homepage</Link>
         </Button>
       );
-    } else {
-      return (
-        <Button variant="outline" asChild>
-          <Link to="/login">Login</Link>
-        </Button>
-      );
     }
+    return (
+      <Button variant="outline" asChild>
+        <Link to="/login">Login</Link>
+      </Button>
+    );
   };
 
   return (
@@ -42,7 +40,7 @@ const Navbar = ({ authUser, onSignOut }) => {
           <div>
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
-                <button className="flex items-center gap-2">
+                <button type="button" className="flex items-center gap-2">
                   <p className="font-medium">{authUser?.data.user.name}</p>
                   <Avatar>
                     <AvatarImage src={authUser?.data.user.avatar} />

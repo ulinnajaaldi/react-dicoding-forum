@@ -1,6 +1,5 @@
+import { hideLoading, showLoading } from "react-redux-loading-bar";
 import { LeaderboardsServices } from "@/service/LeaderboardsServices";
-import { hideLoading } from "react-redux-loading-bar";
-import { showLoading } from "react-redux-loading-bar";
 
 export const ActionType = {
   FETCH_LEADERBOARD: "FETCH_LEADERBOARD",

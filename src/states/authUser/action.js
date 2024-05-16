@@ -32,7 +32,7 @@ export const asyncSetAuthUser =
         description: "You have successfully logged in",
       });
 
-      const token = response.data.token;
+      const { token } = response.data;
       putAccessToken(token);
 
       const authUser = await UsersServices.getOwnProfile();

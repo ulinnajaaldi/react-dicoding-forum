@@ -1,3 +1,4 @@
+/* eslint-disable default-param-last */
 import { ActionType } from "./action";
 
 const leaderboardReducer = (leaderboards = [], action) => {

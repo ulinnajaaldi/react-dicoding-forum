@@ -15,12 +15,12 @@ const CommentForm = (props) => {
           required
           value={content}
           onChange={(e) => setContent(e.target.value)}
-          disabled={authUser ? false : true}
+          disabled={!authUser}
         />
         <Button
           type="submit"
           size="sm"
-          disabled={authUser ? false : true}
+          disabled={!authUser}
           onClick={handleComment}
         >
           Kirim

@@ -36,7 +36,7 @@ const CreateThreadPage = () => {
 
   return (
     <PageWrapper>
-      <ActionTopBack url={"/"} />
+      <ActionTopBack url="/" />
       <div className="container max-w-2xl py-10 md:py-20">
         <h1 className="text-center text-2xl font-bold md:text-4xl">
           Buat thread kamu sendiri!

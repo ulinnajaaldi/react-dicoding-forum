@@ -36,6 +36,7 @@ const HeroSection = (props) => {
           <div className="flex flex-wrap items-center justify-center gap-3">
             {categories?.map((cat, index) => (
               <Button
+                // eslint-disable-next-line react/no-array-index-key
                 key={index}
                 size="sm"
                 variant={cat === category ? "default" : "outline"}

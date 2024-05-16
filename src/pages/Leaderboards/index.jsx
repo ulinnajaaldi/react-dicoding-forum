@@ -16,7 +16,7 @@ const Leaderboards = () => {
 
   return (
     <PageWrapper>
-      <ActionTopBack url={"/"} />
+      <ActionTopBack url="/" />
       <section className="container max-w-2xl py-10">
         <h1 className=" text-3xl font-bold md:text-4xl">Leaderboards</h1>
         <div className="mt-5 flex flex-col gap-3">
@@ -28,6 +28,7 @@ const Leaderboards = () => {
           </div>
           {leaderboards?.map((leaderboard, index) => (
             <LeaderboardCard
+              // eslint-disable-next-line react/no-array-index-key
               key={index}
               leaderboard={leaderboard}
               authUser={authUser}
