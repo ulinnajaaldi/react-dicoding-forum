@@ -6,10 +6,15 @@ import LoadingBar from "react-redux-loading-bar";
 
 import { asyncUnsetAuthUser } from "@/states/authUser/action";
 import asyncPreloadProcess from "@/states/isPreload/action";
-import { CreateThreadPage, HomePage, LoginPage, RegisterPage } from "@/pages";
-import Homepage from "@/pages/HomePage";
 import Navbar from "@/components/layout/navbar";
-import ThreadDetails from "./pages/ThreadsDetails";
+import {
+  CreateThreadPage,
+  HomePage,
+  Leaderboards,
+  LoginPage,
+  RegisterPage,
+  ThreadsDetails,
+} from "@/pages";
 
 const App = () => {
   const { authUser = null, isPreload = false } = useSelector(
@@ -48,9 +53,10 @@ const App = () => {
               element={authUser ? <HomePage /> : <RegisterPage />}
             />
             <Route path="/" element={<Navigate to="/threads" />} />
-            <Route path="/threads" element={<Homepage />} />
-            <Route path="/threads/:id" element={<ThreadDetails />} />
+            <Route path="/threads" element={<HomePage />} />
+            <Route path="/threads/:id" element={<ThreadsDetails />} />
             <Route path="/create-thread" element={<CreateThreadPage />} />
+            <Route path="/leaderboard" element={<Leaderboards />} />
           </Routes>
         </main>
       </>
