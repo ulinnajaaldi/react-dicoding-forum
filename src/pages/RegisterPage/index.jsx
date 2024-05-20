@@ -24,6 +24,9 @@ const RegisterPage = () => {
 
   const handleRegister = ({ name, email, password }) => {
     dispatch(asyncRegisterUser({ name, email, password }));
+    setName("");
+    setEmail("");
+    setPassword("");
   };
 
   return (
