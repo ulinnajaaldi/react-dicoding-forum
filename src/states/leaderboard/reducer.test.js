@@ -1,5 +1,9 @@
 /* eslint-disable prettier/prettier */
 
+// * Skenario Test
+//  Should return the initial state
+//  Should handle FETCH_LEADERBOARD
+
 import { describe, it, expect } from "vitest";
 
 import leaderboardReducer from "./reducer";

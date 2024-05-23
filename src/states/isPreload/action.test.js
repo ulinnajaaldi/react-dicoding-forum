@@ -1,6 +1,10 @@
 /* eslint-disable prettier/prettier */
 /* eslint-disable no-unused-expressions */
 
+// * Skenario Test
+//  Should dispatch setAuthUserActionCreator with the fetched authUser
+//  Should dispatch setAuthUserActionCreator with null if the request failed
+
 import { describe, beforeEach, afterEach, it, vi, expect } from "vitest";
 import { showLoading, hideLoading } from "react-redux-loading-bar";
 

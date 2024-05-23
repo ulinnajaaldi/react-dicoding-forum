@@ -1,6 +1,11 @@
 /* eslint-disable prettier/prettier */
 /* eslint-disable no-unused-expressions */
 
+// * Skenario Test
+//  Should dispatch fetchThreadActionCreator with the fetched thread details
+//  Should dispatch createCommentActionCreator with the created comment success
+//  Should not dispatch createCommentActionCreator when failed to create comment
+
 import { describe, beforeEach, afterEach, it, vi, expect } from "vitest";
 import { showLoading, hideLoading } from "react-redux-loading-bar";
 import { toast } from "sonner";

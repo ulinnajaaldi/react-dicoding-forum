@@ -1,6 +1,9 @@
 /* eslint-disable prettier/prettier */
 /* eslint-disable no-unused-expressions */
 
+// * Skenario Test
+//  Should dispatch fetchLeaderboardActionCreator with the fetched leaderboards
+
 import { describe, beforeEach, afterEach, it, vi, expect } from "vitest";
 import { showLoading, hideLoading } from "react-redux-loading-bar";
 

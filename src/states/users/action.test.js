@@ -1,6 +1,10 @@
 /* eslint-disable prettier/prettier */
 /* eslint-disable no-unused-expressions */
 
+// * Skenario Test
+//  Should dispatch receiveUsersActionCreator when register success
+//  Should not dispatch receiveUsersActionCreator when register failed
+
 import { describe, beforeEach, afterEach, it, vi, expect } from "vitest";
 
 import { UsersServices } from "@/service/UsersServices";

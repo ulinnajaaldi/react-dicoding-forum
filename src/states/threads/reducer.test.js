@@ -1,5 +1,13 @@
 /* eslint-disable prettier/prettier */
 
+// * Skenario Test
+//  Should return the initial state
+//  Should return the threads when given by FETCH_THREADS
+//  Should add a new thread when given by CREATE_THREAD
+//  Should toggle up vote a thread when given by UP_VOTE_THREAD
+//  Should toggle down vote a thread when given by DOWN_VOTE_THREAD
+//  Should neutralize a thread when given by NEUTRALIZE_THREAD
+
 import { describe, it, expect } from "vitest";
 import threadsReducer from "./reducer";
 

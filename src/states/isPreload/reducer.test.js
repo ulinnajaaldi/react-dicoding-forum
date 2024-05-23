@@ -1,5 +1,9 @@
 /* eslint-disable prettier/prettier */
 
+//  * Skenario Test
+//  Should return the initial state
+//  Should handle SET_IS_PRELOAD
+
 import { describe, it, expect } from "vitest";
 
 import isPreloadReducer from "./reducer";

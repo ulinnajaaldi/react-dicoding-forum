@@ -1,5 +1,10 @@
 /* eslint-disable prettier/prettier */
 
+//  * Skenario Test
+//  Should return the initial state
+//  Should handle RECEIVE_USER
+//  Should handle FETCH_USERS
+
 import { describe, it, expect } from "vitest";
 import userReducer from "./reducer";
 

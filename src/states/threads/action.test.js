@@ -1,6 +1,10 @@
 /* eslint-disable prettier/prettier */
 /* eslint-disable no-unused-expressions */
 
+// * Skenario Test
+//  Should dispatch createThreadActionCreator with the created thread success
+//  Should not dispatch createThreadActionCreator when failed to create thread
+
 import { describe, beforeEach, afterEach, it, vi, expect } from "vitest";
 import { toast } from "sonner";
 
