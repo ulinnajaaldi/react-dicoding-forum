@@ -1,5 +1,3 @@
-/* eslint-disable prettier/prettier */
-
 // * Skenario Test
 //  Should return the initial state
 //  Should return the thread when given by FETCH_THREAD

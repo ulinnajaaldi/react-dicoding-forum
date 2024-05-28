@@ -1,5 +1,3 @@
-/* eslint-disable prettier/prettier */
-
 // * Skenario Test
 //  Should return the initial state
 //  Should handle FETCH_LEADERBOARD
