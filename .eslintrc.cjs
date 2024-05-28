@@ -9,6 +9,7 @@ module.exports = {
     "airbnb",
     "plugin:prettier/recommended",
     "cypress",
+    "plugin:storybook/recommended"
   ],
   ignorePatterns: ["dist", ".eslintrc.cjs"],
   parserOptions: { ecmaVersion: "latest", sourceType: "module" },
