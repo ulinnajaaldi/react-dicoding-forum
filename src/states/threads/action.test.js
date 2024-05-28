@@ -31,7 +31,7 @@ const fakeCreatedThread = {
   category: "General",
 };
 
-const fakeErrorResponse = new Error("Ups, something went wrong");
+const fakeErrorResponse = "Failed to create thread";
 
 vi.mock("sonner", () => ({
   toast: {
@@ -79,7 +79,7 @@ describe("asyncCreateThreadThunk", () => {
 
     // assert
     expect(dispatch).not.toHaveBeenCalledWith(
-      createThreadActionCreator(fakeThreads),
+      createThreadActionCreator(fakeCreatedThread),
     );
   });
 });
