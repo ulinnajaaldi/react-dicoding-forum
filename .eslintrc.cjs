@@ -1,6 +1,6 @@
 module.exports = {
   root: true,
-  env: { browser: true, es2020: true },
+  env: { browser: true, es2020: true, "cypress/global": true },
   extends: [
     "eslint:recommended",
     "plugin:react/recommended",
@@ -8,6 +8,7 @@ module.exports = {
     "plugin:react-hooks/recommended",
     "airbnb",
     "plugin:prettier/recommended",
+    "cypress",
   ],
   ignorePatterns: ["dist", ".eslintrc.cjs"],
   parserOptions: { ecmaVersion: "latest", sourceType: "module" },
